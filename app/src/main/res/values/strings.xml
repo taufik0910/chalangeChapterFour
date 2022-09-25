@@ -3,7 +3,9 @@
     <string name="txt_jdl_batu">Batu</string>
     <string name="txt_jdl_gunting">Gunting</string>
     <string name="txt_jdl_kertas">Kertas</string>
-    <string name="ply_com">Com</string>
+    <string name="ply_com">COM</string>
     <string name="ply_user">Pemain 1</string>
+    <string name="todo">TODO</string>
+    <string name="vs">VS</string>
 
 </resources>
