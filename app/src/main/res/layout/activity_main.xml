@@ -129,12 +129,10 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="35dp"
         android:layout_marginTop="196dp"
         android:layout_below="@id/jd_batu"
-        android:layout_marginRight="31dp"
-        android:layout_toLeftOf="@id/com_gunting"
-        android:layout_toRightOf="@id/usr_gunting"
+        android:layout_toStartOf="@id/com_gunting"
+        android:layout_toEndOf="@id/usr_gunting"
         android:fontFamily="@font/itim_regular"
         android:rotation="-15"
         android:text="@string/vs"
@@ -181,6 +179,7 @@
         android:src="@drawable/ic_kertas" />
 
     <ImageButton
+        android:id="@+id/btn_refresh"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_below="@+id/com_kertas"
