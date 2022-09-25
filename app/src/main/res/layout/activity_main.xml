@@ -1,18 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvOutput1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        android:paddingTop="60dp"
+        android:paddingEnd="16dp"
+        android:text="@string/txt_jdl_kertas"
+        android:textSize="35sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvOutput2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/txt_jdl_gunting"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/tvOutput3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="60dp"
+        android:text="@string/txt_jdl_batu"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/ply_user" />
+
+        <TextView
+            android:id="@+id/txt_com"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="@string/ply_com" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/usr_batu"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_batu"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/usr_gunting"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/usr_batu"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_gunting" />
+
+        <ImageView
+            android:id="@+id/usr_kertas"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/usr_gunting"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="false"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_kertas" />
+
+        <ImageView
+            android:id="@+id/com_batu"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="false"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_batu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="VS"
+            android:textSize="60sp" />
+
+        <ImageView
+            android:id="@+id/com_gunting"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/com_batu"
+            android:layout_alignParentRight="true"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_gunting" />
+
+        <ImageView
+            android:id="@+id/com_kertas"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/com_gunting"
+            android:layout_alignParentRight="true"
+            android:paddingTop="16dp"
+            android:src="@drawable/ic_kertas" />
+
+        <ImageButton
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_below="@+id/com_kertas"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/ic_refresh"
+            android:padding="5dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
