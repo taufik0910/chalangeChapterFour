@@ -8,7 +8,6 @@
 
     <TextView
         android:id="@+id/jd_kertas"
-        android:textColor="@color/yellow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -17,12 +16,12 @@
         android:gravity="center_horizontal"
         android:rotation="-15"
         android:text="@string/txt_jdl_kertas"
+        android:textColor="@color/yellow"
         android:textSize="45sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/jd_gunting"
-        android:textColor="@color/green"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/jd_kertas"
@@ -32,12 +31,12 @@
         android:gravity="center_horizontal"
         android:rotation="-15"
         android:text="@string/txt_jdl_gunting"
+        android:textColor="@color/green"
         android:textSize="45sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/jd_batu"
-        android:textColor="@color/antah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/jd_gunting"
@@ -47,6 +46,7 @@
         android:gravity="center_horizontal"
         android:rotation="-15   "
         android:text="@string/txt_jdl_batu"
+        android:textColor="@color/antah"
         android:textSize="45sp"
         android:textStyle="bold" />
 
@@ -61,8 +61,8 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/itim_regular"
         android:text="@string/ply_user"
-        android:textSize="25sp"
         android:textColor="@color/antah2"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
@@ -74,12 +74,12 @@
         android:layout_marginLeft="342dp"
         android:layout_marginTop="249dp"
         android:layout_marginEnd="50dp"
-        android:textColor="@color/antah2"
         android:layout_toStartOf="@id/tx_pemain"
         android:layout_toLeftOf="@+id/tx_pemain"
         android:fontFamily="@font/itim_regular"
         android:gravity="center_horizontal"
         android:text="@string/ply_com"
+        android:textColor="@color/antah2"
         android:textSize="25sp"
         android:textStyle="bold" />
 
@@ -127,17 +127,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/jd_batu"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginStart="32dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="196dp"
-        android:layout_toStartOf="@id/com_gunting"
-        android:layout_toEndOf="@id/usr_gunting"
+        android:layout_below="@id/jd_batu"
+        android:layout_marginRight="31dp"
+        android:layout_toLeftOf="@id/com_gunting"
+        android:layout_toRightOf="@id/usr_gunting"
         android:fontFamily="@font/itim_regular"
-        android:rotation="-20"
+        android:rotation="-15"
         android:text="@string/vs"
         android:textColor="@color/red"
-        android:textSize="70sp" />
+        android:textSize="60sp" />
 
     <ImageView
         android:id="@+id/com_batu"
