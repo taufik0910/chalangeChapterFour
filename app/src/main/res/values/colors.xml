@@ -8,4 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#10000000</color>
+
+    <color name="red">#DA3131</color>
+    <color name="yellow">#f6b26b</color>
+    <color name="green">#93c47d</color>
+    <color name="antah">#c27ba0</color>
+    <color name="antah2">#08b8fc</color>
+
+
 </resources>
