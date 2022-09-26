@@ -7,5 +7,8 @@
     <string name="ply_user">Pemain 1</string>
     <string name="todo">TODO</string>
     <string name="vs">VS</string>
+    <string name="draw">Draw</string>
+    <string name="comwin">Komputer Menang</string>
+    <string name="pemainmenang">Pemain Menang</string>
 
 </resources>

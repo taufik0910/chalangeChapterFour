@@ -1,7 +1,14 @@
 package com.example.chalangechapterfour
 
 interface Callback {
-    fun tampilkanHasil(result: String) {
+    fun playing(player: String, com:String) {
 
     }
+    fun callbackColor(text: Int, bg: Int, textColor: Int){
+
+    }
+
+
+
+
 }
