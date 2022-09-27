@@ -20,7 +20,7 @@ class Controller(private val callback: Callback) : AppCompatActivity(), Callback
 
             else -> {
                 Log.d("Hasil", "Draw")
-                callback.uiResult(R.string.draw, R.color.purple_700, R.color.white, 40f)
+                callback.uiResult(R.string.draw, R.color.purple_500, R.color.white, 40f)
 
             }
         }
