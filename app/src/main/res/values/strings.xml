@@ -5,10 +5,14 @@
     <string name="txt_jdl_kertas">Kertas</string>
     <string name="ply_com">COM</string>
     <string name="ply_user">Pemain 1</string>
-    <string name="todo">TODO</string>
+    <string name="batu">Batu</string>
+
     <string name="vs">VS</string>
     <string name="draw">Draw</string>
     <string name="comwin">Komputer Menang</string>
     <string name="pemainmenang">Pemain Menang</string>
+    <string name="gunting">Gunting</string>
+    <string name="kertas">Kertas</string>
+    <string name="ctnrefresh">refresh</string>
 
 </resources>

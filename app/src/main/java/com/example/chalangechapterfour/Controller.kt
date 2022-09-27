@@ -1,35 +1,30 @@
 package com.example.chalangechapterfour
 
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
-class Controller(private val callback: Callback) : AppCompatActivity(), Callback {
-    override fun playing(player: String, com: String) {
+class Controller(private val callback: Callback) : AppCompatActivity(), CallbackFunsi {
 
-        if (player.equals(com)) {
-            callback.callbackColor(R.string.draw, R.drawable.bg_blank, R.color.red)
-        } else if (player.equals("batu")) {
-            if (com.equals("gunting")) {
-                callback.callbackColor(R.string.pemainmenang, R.drawable.bg_blank, R.color.green)
-            } else {
-                callback.callbackColor(R.string.comwin, R.drawable.bg_blank, R.color.red)
+    override fun playingOption(pemain: CharSequence, computer: CharSequence) {
+
+        when {
+            pemain == "batu" && computer == "gunting" || pemain == "gunting" && computer == "kertas" || pemain == "kertas" && computer == "batu" -> {
+                callback.uiResult(R.string.pemainmenang, R.color.green, R.color.white, 25f)
+                Log.d("Hasil", "Pemain Menang!!")
+
+            }
+            pemain == "gunting" && computer == "batu" || pemain == "kertas" && computer == "gunting" || pemain == "batu" && computer == "kertas" -> {
+                Log.d("Hasil", "Computer Menang!!")
+                callback.uiResult(R.string.comwin, R.color.green, R.color.white, 25f)
             }
 
-        } else if (player.equals("gunting")) {
-            if (com.equals("kertas")) {
-                callback.callbackColor(R.string.pemainmenang, R.drawable.bg_blank, R.color.green)
-            } else {
-                callback.callbackColor(R.string.comwin, R.drawable.bg_blank, R.color.red)
+            else -> {
+                Log.d("Hasil", "Draw")
+                callback.uiResult(R.string.draw, R.color.purple_700, R.color.white, 40f)
+
             }
-        } else if (player.equals("kertas")) {
-            if (com.equals("batu")) {
-                callback.callbackColor(R.string.pemainmenang, R.drawable.bg_blank, R.color.green)
-            } else {
-                callback.callbackColor(R.string.comwin, R.drawable.bg_blank, R.color.red)
-            }
-        } else {
-            callback.callbackColor(R.string.comwin, R.drawable.bg_blank, R.color.red)
         }
+        Log.d("Pilihan", "$pemain VS $computer")
 
     }
-
 }

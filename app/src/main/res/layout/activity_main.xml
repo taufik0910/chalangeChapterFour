@@ -93,7 +93,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="4dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/batu"
         android:paddingTop="16dp"
         android:src="@drawable/ic_batu" />
 
@@ -106,7 +106,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="4dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/gunting"
         android:paddingTop="16dp"
         android:src="@drawable/ic_gunting" />
 
@@ -119,18 +119,19 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="4dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/kertas"
         android:paddingTop="16dp"
         android:src="@drawable/ic_kertas" />
 
 
     <TextView
+        android:id="@+id/txt_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/jd_batu"
         android:layout_centerInParent="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="196dp"
-        android:layout_below="@id/jd_batu"
         android:layout_toStartOf="@id/com_gunting"
         android:layout_toEndOf="@id/usr_gunting"
         android:fontFamily="@font/itim_regular"
@@ -145,10 +146,9 @@
         android:layout_height="100dp"
         android:layout_below="@id/txt_com"
         android:layout_alignParentEnd="true"
-
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/batu"
         android:paddingTop="16dp"
         android:src="@drawable/ic_batu" />
 
@@ -161,7 +161,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="14dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/gunting"
         android:paddingTop="16dp"
         android:src="@drawable/ic_gunting" />
 
@@ -174,7 +174,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="15dp"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/kertas"
         android:paddingTop="16dp"
         android:src="@drawable/ic_kertas" />
 
@@ -187,7 +187,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/ic_refresh"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/ctnrefresh"
         android:padding="5dp"
         tools:ignore="SpeakableTextPresentCheck" />
 
