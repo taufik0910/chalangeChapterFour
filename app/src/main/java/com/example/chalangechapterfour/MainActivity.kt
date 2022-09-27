@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity(), Callback {
                     optPemain[index].contentDescription.toString().trim().lowercase(),
                     chosecom.contentDescription.toString().trim().lowercase()
                 )
+                disableChoose()
                 optPemain.forEach {
                     it.setBackgroundResource(android.R.color.transparent)
                 }
@@ -52,11 +53,13 @@ class MainActivity : AppCompatActivity(), Callback {
         binding.btnRefresh.setOnClickListener {
             optPemain.forEach {
                 it.setBackgroundResource(android.R.color.transparent)
+                enableChose()
             }
             optCom.forEach {
                 it.setBackgroundResource(android.R.color.transparent)
             }
-            hasil(R.string.vs, android.R.color.transparent, R.color.red,60f)
+
+            uiResult(R.string.vs, android.R.color.transparent, R.color.red,60f)
 
             Log.d("Refresh", "Masukkan Pilihan Lagi")
         }
@@ -65,11 +68,22 @@ class MainActivity : AppCompatActivity(), Callback {
 
 
     @RequiresApi(Build.VERSION_CODES.M)
-    override fun hasil(text: Int, bg: Int, textColor: Int, textSize: Float) {
+    override fun uiResult(text: Int, bg: Int, textColor: Int, textSize: Float) {
         binding.txtResult.text = getString(text)
         binding.txtResult.setBackgroundColor(getColor(bg))
         binding.txtResult.setTextColor(getColor(textColor))
         binding.txtResult.setTextSize(textSize)
     }
 
+    fun disableChoose(){
+        binding.usrGunting.isEnabled = false
+        binding.usrBatu.isEnabled = false
+        binding.usrKertas.isEnabled = false
+    }
+    fun enableChose(){
+        binding.usrGunting.isEnabled = true
+        binding.usrBatu.isEnabled = true
+        binding.usrKertas.isEnabled = true
+
+    }
 }
